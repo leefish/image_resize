@@ -1,10 +1,7 @@
 Image Resize for Wolf
 =====================
 
-This plugin has been tested with Wolf version 0.7.5+. It's homepage is:
-
-`http://github.com/naehrstoff/image_resize/tree/master`
-
+This plugin has been tested and updated to work with Wolf version 0.7.5+. 
 
 About
 -----
