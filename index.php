@@ -6,12 +6,12 @@ Plugin::setInfos(array(
     'id'          => 'image_resize',
     'title'       => 'Image Resize',
     'description' => 'Allows for dynamic resizing of images.',
-    'version'     => '1.3.1',
+    'version'     => '1.4.0',
     'license'     => 'GPL 3.0',
-    'author'      => 'Peter Gassner',
-    'website'     => 'http://www.naehrstoff.ch/code/image-resize-for-frog',
-    'update_url'  => 'http://frog.naehrstoff.ch/plugin-versions.xml',
-    'require_frog_version' => '0.9.4'
+    'author'      => 'Peter Gassner (maintained by Dejan Andjelkovic)',
+    'website'     => 'http://project79.net/projects/image-resize',
+    'update_url'  => 'http://project79.net/plugin-versions.xml',
+    'require_wolf_version' => '0.7.0'
 ));
 
 // Listen for page_not_found messages
@@ -32,7 +32,7 @@ function image_resize_try_resizing() {
     if (!AuthUser::isLoggedIn()) {
         AuthUser::load();
     }
-    if (!AuthUser::hasPermission('administrator,developer,editor')) {
+    if (!AuthUser::hasPermission('admin_view')) {
         return false;
     }
     // Check that gd library is available
@@ -59,7 +59,7 @@ function image_resize_scale($path) {
     $params      = explode("/", $path);
     $namepart    = array_pop($params);
     $public_path = URL_PUBLIC . "/" . join("/", $params);
-    $server_path = FROG_ROOT  . "/" . join("/", $params);
+    $server_path = CMS_ROOT  . "/" . join("/", $params);
     
     // Dissect filename to find dimension information
     $pattern = <<<FILENAME_PATTERN

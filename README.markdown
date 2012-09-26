@@ -1,7 +1,7 @@
-Image Resize for Frog
+Image Resize for Wolf
 =====================
 
-This plugin has been tested with Frog version 0.9.4 and 0.9.5. It's homepage is:
+This plugin has been tested with Wolf version 0.7.5+. It's homepage is:
 
 `http://github.com/naehrstoff/image_resize/tree/master`
 
@@ -11,7 +11,7 @@ About
 
 With the Image Resize plugin enabled, you can easily create thumbnails of your images.
 
-It was inspired by the Drupal Image Cache module. The image resize functions are taken from Drupal and have been adapted for Frog CMS.
+It was inspired by the Drupal Image Cache module. The image resize functions are taken from Drupal and have been adapted for Frog CMS and later for Wolf CMS.
 
 
 How to use
@@ -71,7 +71,7 @@ To get mod_rewrite to work, you'll have to make sure that it is:
 
 * Possible to use mod_rewrite on your server
 * You rename the file `_.htaccess` to `.htaccess` (without the leading underscore)
-* You set the variable `USE_MOD_REWRITE` in Frog's config.php to true.
+* You set the variable `USE_MOD_REWRITE` in Wolf's config.php to true.
 
 
 Contributors
@@ -81,12 +81,15 @@ Contributors
 * Mika Tuupola <tuupola@appelsiini.net>
 * J. King <jking@jkingweb.ca>
 * René Kersten <info@pixel-webarts.de>
+* Dejan Andjelkovic <http://project79.net>
 
 Changelog
 ---------
 
+* 1.4.0 (September 26, 2012)
+	* Updated to work with Wolf
 * 1.3.1 (July 15, 2010)
-  * Fixed transparency for Gif and PNG images
+	* Fixed transparency for Gif and PNG images
 * 1.3.0 (June 12, 2009)
 	* Require editor, developer or administrator permissions before resizing for security reasons.
 	* 8-bit PNGs are no longer converted to 24-bit.

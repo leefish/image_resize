@@ -74,7 +74,7 @@
 
 <h4>How to use Image Resize together with the Page Not Found plugin</h4>
 
-<p>If you want to use Image Resize with Frog&#8217;s Page Not Found plugin, you will have to include the following code at the top of your customized Page Not Found page:</p>
+<p>If you want to use Image Resize with Wolf&#8217;s Page Not Found plugin, you will have to include the following code at the top of your customized Page Not Found page:</p>
 
 <p><code>&lt;?php image_resize_try_resizing() ?&gt;</code></p>
 
@@ -96,18 +96,18 @@
 
 <h3>How does it work?</h3>
 
-<p>This module relies on some <code>mod_rewrite</code> magic: If the requested thumbnail exists, Apache knows this and delivers the file to the browser. If the file doesn't exist, Apache hands control over to Frog CMS.</p>
+<p>This module relies on some <code>mod_rewrite</code> magic: If the requested thumbnail exists, Apache knows this and delivers the file to the browser. If the file doesn't exist, Apache hands control over to Wolf CMS.</p>
 
-<p>Frog won't find the file either, so it sends a <code>page_not_found</code> message. This is the moment where the Image Resize plugin suddenly feels responsible. It checks whether an image without the dimension specifier exists (<code>flower.jpg</code>) and converts it into a thumbnail with the requested name (<code>flower.230x150.jpg</code>). The next time someone asks for that file it will be there!</p>
+<p>Wolf won't find the file either, so it sends a <code>page_not_found</code> message. This is the moment where the Image Resize plugin suddenly feels responsible. It checks whether an image without the dimension specifier exists (<code>flower.jpg</code>) and converts it into a thumbnail with the requested name (<code>flower.230x150.jpg</code>). The next time someone asks for that file it will be there!</p>
 
 <h3>About this plugin</h3>
 
-<p>This plugin was created by <a href="http://www.naehrstoff.ch">Peter Gassner</a> for the deliciously small and elegant <a href="http://madebyfrog.com">Frog CMS</a>.</p>
+<p>This plugin was created by <a href="http://www.naehrstoff.ch">Peter Gassner</a> for the deliciously small and elegant <a href="http://madebyfrog.com">Frog CMS</a>. As of September 2012 the plugin was adopted and updated to work with Wolf CMS. All info can be found <a href="http://project79.net/projects/image-resize" target="_blank">here</a>.</p>
 
-<p>It was inspired by the Drupal <a href="http://drupal.org/project/imagecache">Image Cache</a> module. The image resize functions are taken from <a href="http://drupal.org/">Drupal</a> and adapted for Frog CMS.</p>
+<p>It was inspired by the Drupal <a href="http://drupal.org/project/imagecache">Image Cache</a> module. The image resize functions are taken from <a href="http://drupal.org/">Drupal</a> and adapted for Frog and Wolf CMS.</p>
 
 <p>The plugin can be installed via Github, where you can either download a ZIP-file or checkout the Git repository.</p>
 
-<p><a href="http://github.com/naehrstoff/image_resize/tree/master">Download the plugin</a> from Github.</p>
+<p><a href="http://github.com/project79/image_resize">Download the plugin</a> from Github.</p>
 
 <p>Patches and suggestions are very welcome!</p>
